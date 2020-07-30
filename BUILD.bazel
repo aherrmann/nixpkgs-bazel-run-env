@@ -1,0 +1,16 @@
+load("//:repro.bzl", "using_run", "using_run_shell")
+
+using_run(
+    name = "using-run",
+    out = "using-run.txt",
+)
+
+using_run_shell(
+    name = "using-run-shell",
+    out = "using-run-shell.txt",
+)
+
+sh_binary(
+    name = "script",
+    srcs = ["script.sh"],
+)
